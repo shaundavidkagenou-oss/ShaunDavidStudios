@@ -34,7 +34,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="preload" href="../assets/fonts/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/main.css?v=4">
+  <link rel="stylesheet" href="../assets/css/main.css?v=5">
   <link rel="stylesheet" href="../assets/css/animations.css?v=3">
 
   <!-- Schema.org Structured Data -->
@@ -55,9 +55,24 @@
       },
       {
         "@type": "BlogPosting",
+        "@id": "#colombo-reveal",
+        "headline": "Colombo: Shadows of the Island — Officially Revealed",
+        "datePublished": "2026-10-24",
+        "description": "Shaun David Studios reveals Colombo: Shadows of the Island, an original open-world action-adventure game set across a living, reimagined version of Colombo, Sri Lanka.",
+        "image": "https://shaundavidstudios.pages.dev/assets/img/colombo-shadows-of-the-island-logo.png",
+        "author": {
+          "@id": "#shaun-david"
+        },
+        "publisher": {
+          "@id": "#organization"
+        },
+        "mainEntityOfPage": "https://shaundavidstudios.pages.dev/news/#colombo-reveal"
+      },
+      {
+        "@type": "BlogPosting",
         "@id": "#riderise-lk-announcement",
         "headline": "Introducing RideRise LK — Built for Stunt Players & Riders in Sri Lanka",
-        "datePublished": "2026-10-27",
+        "datePublished": "2026-10-24",
         "description": "Shaun David Studios unveils RideRise LK (Ride · Stunt · Connect), an app designed for stunt players, BMX riders, and freestyle crews in Sri Lanka.",
         "image": "https://shaundavidstudios.pages.dev/assets/img/riderise-lk-logo.png",
         "author": {
@@ -75,7 +90,8 @@
         "alternateName": "SDS",
         "email": "official.shaundavidstudios@gmail.com",
         "sameAs": [
-          "https://www.instagram.com/shaun.david.studios/"
+          "https://www.instagram.com/shaun.david.studios/",
+          "https://www.youtube.com/@ShaunDavidStudios"
         ],
         "logo": {
           "@type": "ImageObject",
@@ -199,9 +215,43 @@
         </div>
 
         <div class="news-list" data-news-feed>
-          <article id="riderise-lk-announcement" class="sds-card sds-card--gold news-entry reveal" data-no-tilt data-filter-item="announcement software">
+          <article id="colombo-reveal" class="sds-card sds-card--gold news-entry reveal" data-no-tilt data-filter-item="announcement game-dev">
             <div class="news-entry__meta">
-              <time class="news-entry__date" datetime="2026-10-27">October 2026</time>
+              <time class="news-entry__date" datetime="2026-10-24">October 2026</time>
+              <span class="badge badge--status">
+                <span class="badge__pulse" aria-hidden="true"></span>
+                <span>New Game Reveal</span>
+              </span>
+              <span class="badge">Open-World · Colombo</span>
+            </div>
+            <div class="news-entry__body">
+              <div class="colombo-layout">
+                <div class="colombo-stage">
+                  <picture>
+                    <source srcset="../assets/img/colombo-shadows-of-the-island-logo.webp" type="image/webp">
+                    <img src="../assets/img/colombo-shadows-of-the-island-logo.png" width="1280" height="720" alt="Official Colombo: Shadows of the Island logo — Sri Lankan flag above the Colombo skyline">
+                  </picture>
+                </div>
+                <div>
+                  <h2>Colombo: Shadows of the Island — Officially Revealed</h2>
+                  <p>
+                    <strong>Shaun David Studios</strong> is proud to reveal <strong>Colombo: Shadows of the Island</strong> — an original open-world action-adventure game set across a living, reimagined version of Colombo, Sri Lanka, and the studio's most ambitious project to date.
+                  </p>
+                  <p>
+                    From neon-lit night markets and harbour docks to rain-slicked downtown streets and quiet coastal roads, the game invites players to explore the island capital at their own pace and uncover the stories moving through its shadows — rendered with the studio's signature golden-hour atmosphere and trilingual street-level detail. The game is currently in active development; platforms and release timing will be announced here and on the studio's official channels.
+                  </p>
+                  <div class="btn-group" style="margin-top: 1rem;">
+                    <a class="btn btn--primary btn--sm" href="../games/#colombo-shadows-of-the-island">Explore the Game</a>
+                    <a class="btn btn--secondary btn--sm" href="https://www.youtube.com/@ShaunDavidStudios" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="riderise-lk-announcement" class="sds-card news-entry reveal" data-no-tilt data-filter-item="announcement software" style="--delay: 60ms;">
+            <div class="news-entry__meta">
+              <time class="news-entry__date" datetime="2026-10-24">October 2026</time>
               <span class="badge badge--status">
                 <span class="badge__pulse" aria-hidden="true"></span>
                 <span>New Studio App</span>
@@ -324,6 +374,7 @@
         <div>
           <h2 class="site-footer__heading">Portfolio</h2>
           <ul class="site-footer__links">
+            <li><a href="../games/#colombo-shadows-of-the-island">Colombo: Shadows of the Island</a></li>
             <li><a href="../games/#sl-bad-boy">SL BAD BOY — Schoolboy Rush</a></li>
             <li><a href="../games/#riderise-lk">RideRise LK</a></li>
             <li><a href="../games/#sds-geox-meetings">SDS Geox Meetings</a></li>
@@ -343,6 +394,12 @@
                 <a href="https://www.instagram.com/shaun.david.studios/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shaun David Studios on Instagram for latest news">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                   <span>Instagram · Latest News</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ShaunDavidStudios" target="_blank" rel="noopener noreferrer" aria-label="Shaun David Studios on YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.56 9.38.56 9.38.56s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.27 3.6-6.27 3.6Z"/></svg>
+                  <span>YouTube</span>
                 </a>
               </li>
             </ul>

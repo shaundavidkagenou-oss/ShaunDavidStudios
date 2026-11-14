@@ -1500,3 +1500,40 @@ p + p {
   }
 }
 
+
+/* ==========================================================================
+   14. Colombo: Shadows of the Island — Flagship Open-World Game Showcase
+   ========================================================================== */
+
+.colombo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 2.1rem;
+  align-items: center;
+}
+
+.colombo-stage {
+  min-width: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  background: #000;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.5);
+}
+
+.colombo-stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.colombo-stage--inline {
+  max-width: 560px;
+  margin: 0 auto 1.6rem;
+}
+
+@media (max-width: 900px) {
+  .colombo-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
