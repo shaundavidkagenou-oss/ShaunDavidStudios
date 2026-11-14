@@ -57,6 +57,8 @@ const REQUIRED_FILES = [
   "assets/img/sds-logo-original.jpg",
   "assets/img/riderise-lk-logo.png",
   "assets/img/riderise-lk-logo.webp",
+  "assets/img/colombo-shadows-of-the-island-logo.png",
+  "assets/img/colombo-shadows-of-the-island-logo.webp",
   "assets/img/favicon.svg"
 ];
 
@@ -352,12 +354,36 @@ if (!siteConfigText.includes('"riderise-lk"')) {
   fail("assets/js/site-config.js missing 'riderise-lk' project entry");
 }
 
+// 10. Verify Colombo: Shadows of the Island flagship game showcase
+checkPngDimensions("assets/img/colombo-shadows-of-the-island-logo.png", 1280, 720);
+for (const cgPage of ["index.html", "games/index.html", "news/index.html", "shaun-david/index.html"]) {
+  const cgHtml = fs.readFileSync(path.join(ROOT, cgPage), "utf8");
+  if (!cgHtml.includes("Colombo: Shadows of the Island")) {
+    fail(`${cgPage}: Missing 'Colombo: Shadows of the Island' flagship game reference`);
+  }
+}
+if (!siteConfigText.includes('"colombo-shadows-of-the-island"')) {
+  fail("assets/js/site-config.js missing 'colombo-shadows-of-the-island' project entry");
+}
+
+// 11. Verify official YouTube channel link across the website
+const YT_CHANNEL_URL = "https://www.youtube.com/@ShaunDavidStudios";
+if (!siteConfigText.includes(YT_CHANNEL_URL)) {
+  fail("assets/js/site-config.js missing official YouTube channel URL in socials");
+}
+for (const ytPage of ["index.html", "about/index.html", "shaun-david/index.html", "games/index.html", "news/index.html", "contact/index.html"]) {
+  const ytHtml = fs.readFileSync(path.join(ROOT, ytPage), "utf8");
+  if (!ytHtml.includes(YT_CHANNEL_URL)) {
+    fail(`${ytPage}: Missing official YouTube channel link`);
+  }
+}
+
 if (errors === 0) {
   pass(`All ${HTML_PAGES.length} HTML pages passed unique <title>, meta description, single <h1>, image alt, and SVG sizing checks.`);
   pass("All CSS multi-column grids use minmax(0, ...) overflow guards for PC & mobile.");
   pass("All internal links, stylesheets, scripts, icons, and images resolve cleanly.");
   pass("All Schema.org JSON-LD blocks (Organization, Person with H.K.S Sathsara, Instagram sameAs, ProfilePage, VideoGame, SoftwareApplication, BlogPosting) parsed cleanly.");
-  pass("Owner-verified details confirmed: H.K.S Sathsara, Best English Announcer in Western Province, official.shaundavidstudios@gmail.com, Instagram (@shaun.david.studios for Latest News), 4-project portfolio including RideRise LK.");
+  pass("Owner-verified details confirmed: H.K.S Sathsara, Best English Announcer in Western Province, official.shaundavidstudios@gmail.com, Instagram (@shaun.david.studios for Latest News), YouTube (@ShaunDavidStudios), 5-project portfolio led by Colombo: Shadows of the Island with RideRise LK.");
   console.log("\nVerification succeeded with 0 errors.");
 } else {
   console.error(`\nVerification failed with ${errors} error(s).`);

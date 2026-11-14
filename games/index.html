@@ -34,7 +34,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="preload" href="../assets/fonts/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/main.css?v=4">
+  <link rel="stylesheet" href="../assets/css/main.css?v=5">
   <link rel="stylesheet" href="../assets/css/animations.css?v=3">
 
   <!-- Schema.org Structured Data (CollectionPage + VideoGame + Organization) -->
@@ -81,6 +81,28 @@
         "url": "https://shaundavidstudios.pages.dev/games/#sl-bad-boy"
       },
       {
+        "@type": "VideoGame",
+        "@id": "#colombo-shadows-of-the-island",
+        "name": "Colombo: Shadows of the Island",
+        "description": "An original open-world action-adventure game set across a living, reimagined version of Colombo, Sri Lanka, built by Shaun David Studios.",
+        "genre": [
+          "Open-World",
+          "Action-Adventure"
+        ],
+        "gameLocation": {
+          "@type": "Place",
+          "name": "Colombo, Sri Lanka"
+        },
+        "image": "https://shaundavidstudios.pages.dev/assets/img/colombo-shadows-of-the-island-logo.png",
+        "author": {
+          "@id": "#organization"
+        },
+        "creator": {
+          "@id": "#shaun-david"
+        },
+        "url": "https://shaundavidstudios.pages.dev/games/#colombo-shadows-of-the-island"
+      },
+      {
         "@type": "SoftwareApplication",
         "@id": "#riderise-lk",
         "name": "RideRise LK",
@@ -108,7 +130,8 @@
         "alternateName": "SDS",
         "email": "official.shaundavidstudios@gmail.com",
         "sameAs": [
-          "https://www.instagram.com/shaun.david.studios/"
+          "https://www.instagram.com/shaun.david.studios/",
+          "https://www.youtube.com/@ShaunDavidStudios"
         ],
         "logo": {
           "@type": "ImageObject",
@@ -201,7 +224,7 @@
         </div>
         <h1 id="portfolio-title" class="page-title">Games &amp; Software Projects</h1>
         <p class="lead" style="max-width: 800px;">
-          Explore the original games, mobile platforms, and web applications built in Sri Lanka by <strong>Shaun David Studios</strong> — featuring our debut 3D game <strong>SL BAD BOY — Schoolboy Rush</strong>, our Sri Lankan stunt-rider app <strong>RideRise LK</strong>, and real-time collaborative and planning software.
+          Explore the original games, mobile platforms, and web applications built in Sri Lanka by <strong>Shaun David Studios</strong> — led by our flagship open-world action-adventure <strong>Colombo: Shadows of the Island</strong>, our debut 3D game <strong>SL BAD BOY — Schoolboy Rush</strong>, our Sri Lankan stunt-rider app <strong>RideRise LK</strong>, and real-time collaborative and planning software.
         </p>
       </div>
     </section>
@@ -210,17 +233,92 @@
     <section class="section" aria-label="Studio Portfolio Directory">
       <div class="container" id="portfolio-directory">
         <div class="filter-bar" role="group" aria-label="Filter projects by category" data-filter-group="#portfolio-directory">
-          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All Projects (4)</button>
-          <button class="filter-btn" type="button" data-filter="game" aria-pressed="false">Games (1)</button>
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All Projects (5)</button>
+          <button class="filter-btn" type="button" data-filter="game" aria-pressed="false">Games (2)</button>
           <button class="filter-btn" type="button" data-filter="software" aria-pressed="false">Apps &amp; Software (3)</button>
         </div>
 
         <!-- 1. FLAGSHIP GAME: SL BAD BOY — SCHOOLBOY RUSH -->
+        <!-- 1. FLAGSHIP OPEN-WORLD GAME: COLOMBO — SHADOWS OF THE ISLAND -->
+        <article id="colombo-shadows-of-the-island" class="sds-card sds-card--gold reveal" data-no-tilt data-filter-item="game" style="margin-bottom: 2.25rem;">
+          <div class="badge-row">
+            <span class="badge badge--status">
+              <span class="badge__pulse" aria-hidden="true"></span>
+              <span>Flagship Game · In Development</span>
+            </span>
+            <span class="badge">Open-World Action-Adventure</span>
+            <span class="badge">Colombo, Sri Lanka</span>
+          </div>
+
+          <h2 class="section-title" style="margin-bottom: 0.75rem;">Colombo: Shadows of the Island</h2>
+          <p class="lead" style="margin-bottom: 1.75rem;">
+            An original open-world action-adventure game set across a living, reimagined version of Colombo, Sri Lanka — the studio's most ambitious project to date.
+          </p>
+
+          <div class="colombo-layout">
+            <div class="colombo-stage">
+              <picture>
+                <source srcset="../assets/img/colombo-shadows-of-the-island-logo.webp" type="image/webp">
+                <img src="../assets/img/colombo-shadows-of-the-island-logo.png" width="1280" height="720" loading="lazy" alt="Official Colombo: Shadows of the Island logo — Sri Lankan flag above the Colombo skyline">
+              </picture>
+            </div>
+
+            <div>
+              <h3>The Island Capital, Open to Explore</h3>
+              <p style="color: var(--text-secondary);">
+                <strong>Colombo: Shadows of the Island</strong> places players inside a sprawling, freely explorable Sri Lankan city — neon-lit night markets, harbour docks, rain-slicked downtown streets, and quiet coastal roads — rendered with the studio's signature golden-hour atmosphere and trilingual street-level detail.
+              </p>
+              <p style="color: var(--text-secondary);">
+                Move through the city at your own pace, uncover the stories moving through its shadows, and experience an original Sri Lankan saga built entirely in-house by <strong>Shaun David Studios</strong>.
+              </p>
+
+              <div class="spec-ledger" style="margin-top: 1.25rem; padding: 1.15rem; background: rgba(6, 8, 13, 0.65); border: 1px solid var(--ivory-border);">
+                <div class="spec-row">
+                  <span class="spec-label">Development Status</span>
+                  <span class="spec-value">In Development</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">Genre</span>
+                  <span class="spec-value">Open-World Action-Adventure</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">Setting</span>
+                  <span class="spec-value">Colombo, Sri Lanka</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">Target Platforms</span>
+                  <span class="spec-value">To Be Announced</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">Public Release Date</span>
+                  <span class="spec-value" data-project-release="colombo-shadows-of-the-island">To Be Announced</span>
+                </div>
+              </div>
+
+              <ul class="tag-list" aria-label="Game Highlights">
+                <li class="tag-chip">Open-World Colombo</li>
+                <li class="tag-chip">Original Sri Lankan Saga</li>
+                <li class="tag-chip">Golden-Hour Atmosphere</li>
+              </ul>
+
+              <div class="btn-group" style="margin-top: 1.4rem;" data-project-actions="colombo-shadows-of-the-island" hidden></div>
+
+              <div class="btn-group" style="margin-top: 1rem;">
+                <a class="btn btn--secondary btn--sm" href="../news/#colombo-reveal">Read the Reveal</a>
+                <a class="btn btn--ghost btn--sm" href="../contact/">Press &amp; Partnership Inquiries</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-screenshots" data-project-screenshots="colombo-shadows-of-the-island" hidden></div>
+        </article>
+
+        <!-- 2. DEBUT 3D GAME: SL BAD BOY — SCHOOLBOY RUSH -->
         <article id="sl-bad-boy" class="sds-card sds-card--gold reveal" data-no-tilt data-filter-item="game" style="margin-bottom: 2.25rem;">
           <div class="badge-row">
             <span class="badge badge--status">
               <span class="badge__pulse" aria-hidden="true"></span>
-              <span>Flagship Game · In Active Development</span>
+              <span>Debut 3D Game · In Active Development</span>
             </span>
             <span class="badge">Web Browser &amp; Android</span>
             <span class="badge">Three.js · JavaScript · Vite · Capacitor</span>
@@ -356,14 +454,14 @@
 
         <!-- 2. FEATURED APP FOR SRI LANKAN STUNT RIDERS: RIDERISE LK -->
         <article id="riderise-lk" class="sds-card sds-card--gold reveal" data-no-tilt data-filter-item="software" style="margin-bottom: 2.25rem;">
-          <div class="badge-row">
-            <span class="badge badge--status">
-              <span class="badge__pulse" aria-hidden="true"></span>
-              <span>New Studio App · In Active Development</span>
-            </span>
-            <span class="badge">Android &amp; Web</span>
-            <span class="badge">Ride · Stunt · Connect</span>
-          </div>
+              <div class="badge-row">
+                <span class="badge badge--status">
+                  <span class="badge__pulse" aria-hidden="true"></span>
+                  <span>New Studio App · Development Complete</span>
+                </span>
+                <span class="badge">Android &amp; Web</span>
+                <span class="badge">Ride · Stunt · Connect</span>
+              </div>
 
           <h2 class="section-title" style="margin-bottom: 0.75rem;">RideRise LK</h2>
           <p class="lead" style="margin-bottom: 1.75rem;">
@@ -390,7 +488,7 @@
               <div class="spec-ledger" style="margin-top: 1.25rem; padding: 1.15rem; background: rgba(6, 8, 13, 0.65); border: 1px solid var(--ivory-border);">
                 <div class="spec-row">
                   <span class="spec-label">Development Status</span>
-                  <span class="spec-value">In Active Development</span>
+                  <span class="spec-value">Development Complete</span>
                 </div>
                 <div class="spec-row">
                   <span class="spec-label">Designed For</span>
@@ -553,6 +651,7 @@
         <div>
           <h2 class="site-footer__heading">Portfolio</h2>
           <ul class="site-footer__links">
+            <li><a href="#colombo-shadows-of-the-island">Colombo: Shadows of the Island</a></li>
             <li><a href="#sl-bad-boy">SL BAD BOY — Schoolboy Rush</a></li>
             <li><a href="#riderise-lk">RideRise LK</a></li>
             <li><a href="#sds-geox-meetings">SDS Geox Meetings</a></li>
@@ -572,6 +671,12 @@
                 <a href="https://www.instagram.com/shaun.david.studios/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shaun David Studios on Instagram for latest news">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                   <span>Instagram · Latest News</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ShaunDavidStudios" target="_blank" rel="noopener noreferrer" aria-label="Shaun David Studios on YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.56 9.38.56 9.38.56s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.27 3.6-6.27 3.6Z"/></svg>
+                  <span>YouTube</span>
                 </a>
               </li>
             </ul>

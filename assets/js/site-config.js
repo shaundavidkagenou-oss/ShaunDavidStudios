@@ -49,7 +49,7 @@ window.SDS_SITE_CONFIG = {
    */
   socials: {
     instagram: "https://www.instagram.com/shaun.david.studios/",
-    youtube: "",
+    youtube: "https://www.youtube.com/@ShaunDavidStudios",
     x: "",
     linkedin: "",
     discord: "",
@@ -64,6 +64,17 @@ window.SDS_SITE_CONFIG = {
    * `playUrl` or `downloadUrl` and the Play / Download buttons will activate!
    */
   projects: {
+    "colombo-shadows-of-the-island": {
+      title: "Colombo: Shadows of the Island",
+      category: "game",
+      status: "In Development",
+      platforms: [],
+      packageId: "",
+      playUrl: "",
+      downloadUrl: "",
+      releaseDate: "",
+      screenshots: []
+    },
     "sl-bad-boy": {
       title: "SL BAD BOY — Schoolboy Rush",
       category: "game",
@@ -78,7 +89,7 @@ window.SDS_SITE_CONFIG = {
     "riderise-lk": {
       title: "RideRise LK",
       category: "software",
-      status: "In Active Development",
+      status: "Development Complete",
       platforms: ["Android", "Web Application"],
       packageId: "lk.shaunstudios.riderise",
       playUrl: "",
