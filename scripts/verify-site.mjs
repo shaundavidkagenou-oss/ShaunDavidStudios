@@ -59,6 +59,7 @@ const REQUIRED_FILES = [
   "assets/img/riderise-lk-logo.webp",
   "assets/img/colombo-shadows-of-the-island-logo.png",
   "assets/img/colombo-shadows-of-the-island-logo.webp",
+  "colombo/index.html",
   "assets/img/favicon.svg"
 ];
 
@@ -67,6 +68,7 @@ const HTML_PAGES = [
   "about/index.html",
   "shaun-david/index.html",
   "games/index.html",
+  "colombo/index.html",
   "news/index.html",
   "contact/index.html",
   "404.html"
@@ -380,11 +382,22 @@ for (const ytPage of ["index.html", "about/index.html", "shaun-david/index.html"
 
 // 12. Verify Colombo: Shadows of the Island main voice cast credits
 const COLOMBO_CAST = ["Shashika Induwara", "Dineth Nethsara", "H.K.S Sathsara"];
-const colomboCastHtml = fs.readFileSync(path.join(ROOT, "games/index.html"), "utf8");
-for (const castMember of COLOMBO_CAST) {
-  if (!colomboCastHtml.includes(castMember)) {
-    fail(`games/index.html: Missing Colombo main voice cast credit '${castMember}'`);
+for (const castPage of ["games/index.html", "colombo/index.html"]) {
+  const colomboCastHtml = fs.readFileSync(path.join(ROOT, castPage), "utf8");
+  for (const castMember of COLOMBO_CAST) {
+    if (!colomboCastHtml.includes(castMember)) {
+      fail(`${castPage}: Missing Colombo main voice cast credit '${castMember}'`);
+    }
   }
+  if (!colomboCastHtml.includes("cast-card")) {
+    fail(`${castPage}: Missing standalone voice-cast spotlight cards (.cast-card)`);
+  }
+}
+
+// 13. Verify the dedicated Colombo page is registered in sitemap.xml
+const sitemapText = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
+if (!sitemapText.includes("https://shaundavidstudios.pages.dev/colombo/")) {
+  fail("sitemap.xml missing the dedicated /colombo/ page URL");
 }
 
 if (errors === 0) {
