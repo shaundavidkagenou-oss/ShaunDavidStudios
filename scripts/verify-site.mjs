@@ -378,12 +378,22 @@ for (const ytPage of ["index.html", "about/index.html", "shaun-david/index.html"
   }
 }
 
+// 12. Verify Colombo: Shadows of the Island main voice cast credits
+const COLOMBO_CAST = ["Shashika Induwara", "Dineth Nethsara", "H.K.S Sathsara"];
+const colomboCastHtml = fs.readFileSync(path.join(ROOT, "games/index.html"), "utf8");
+for (const castMember of COLOMBO_CAST) {
+  if (!colomboCastHtml.includes(castMember)) {
+    fail(`games/index.html: Missing Colombo main voice cast credit '${castMember}'`);
+  }
+}
+
 if (errors === 0) {
   pass(`All ${HTML_PAGES.length} HTML pages passed unique <title>, meta description, single <h1>, image alt, and SVG sizing checks.`);
   pass("All CSS multi-column grids use minmax(0, ...) overflow guards for PC & mobile.");
   pass("All internal links, stylesheets, scripts, icons, and images resolve cleanly.");
   pass("All Schema.org JSON-LD blocks (Organization, Person with H.K.S Sathsara, Instagram sameAs, ProfilePage, VideoGame, SoftwareApplication, BlogPosting) parsed cleanly.");
   pass("Owner-verified details confirmed: H.K.S Sathsara, Best English Announcer in Western Province, official.shaundavidstudios@gmail.com, Instagram (@shaun.david.studios for Latest News), YouTube (@ShaunDavidStudios), 5-project portfolio led by Colombo: Shadows of the Island with RideRise LK.");
+  pass("Colombo: Shadows of the Island main voice cast credited: Shashika Induwara, Dineth Nethsara, H.K.S Sathsara (character reveals to be announced).");
   console.log("\nVerification succeeded with 0 errors.");
 } else {
   console.error(`\nVerification failed with ${errors} error(s).`);
